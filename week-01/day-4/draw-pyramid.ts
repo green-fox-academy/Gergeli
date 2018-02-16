@@ -14,13 +14,16 @@
     let n: number = 4;
 
 
-    for (var i = 0; i < n; i++) {
-      var str = '';
-      for (var j = 1; j < n-i; j++) {
-        str = str + ' ';
-      }
-      for (var k = 1; k <= (2*i+1); k++) {
-        str = str + '*';
-      }
-      console.log(str);
+    let line: number = 4;
+    
+    
+    for(let i: number = 0; i < line; i++){
+        let star: string = '';
+        for(let j: number = 1; j < (line-i); j++){
+            star = star + ' ';
+        }
+        for(let z: number = 1; z <= (2*i+1); z++){
+            star = star + '*';
+        }
+        console.log(star);
     }
