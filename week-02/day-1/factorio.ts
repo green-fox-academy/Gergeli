@@ -8,14 +8,16 @@ function factorio(a: number){
     let q: number = a;
     let b: number = a;
 
-    for(let i: number = 1; i < b; i++){
-
-        a = a * (q-i);
-
+    if(a == 0){
+        return 1;
+    }else{
+        for(let i: number = 1; i < b; i++){
+            a = a * (q-i);        
+        }
+        return a;
     }
-
-    return a;
 
 }
 
-console.log(factorio(6));
+
+console.log(factorio(5));
