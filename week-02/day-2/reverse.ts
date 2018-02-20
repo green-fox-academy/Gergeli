@@ -9,11 +9,16 @@ let reversed: string = '.eslaf eb t\'ndluow ecnetnes siht ,dehctiws erew eslaf d
 let leg: number = reversed.length;
 let newString: string = '';
 
-for(let i: number = 1; i <= reversed.length; i++){
+function rev(a){
+    for(let i: number = 1; i <= reversed.length; i++){
 
-    newString = newString + reversed.charAt(leg-1);
-    leg -= 1;
+        a = a + reversed.charAt(leg-1);
+        leg -= 1;
 
+    }
+    return a;
 }
 
-console.log(newString);
+console.log(rev(newString));
+
+//console.log(newString);
