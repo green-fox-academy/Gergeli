@@ -2,8 +2,8 @@
 
 let accounts: any[] = [
   { client_name: 'Igor', account_number: 11234543, balance: 203004099.2 },
-  { client_name: 'Vladimir', account_number: 43546731, balance: 5204100071.23 },
-  { client_name: 'Sergei', account_number: 23456311, balance: 1353600.0 }
+  { client_name: 'Vladimir', account_number: 43546731, balance: 1500 },
+  { client_name: 'Sergei', account_number: 23456311, balance: 500 }
 ];
 
 // Create function that returns the name and balance of cash on an account in a list
@@ -50,17 +50,29 @@ function transfer(arr: any[], from: number, to: number, cash: number,){
             t[1] = 1;
         }
     }
-    if(t.length != 2){
+    if(t.length != 1){
         console.log('404 - account not found');
+
+        for(let i: number = 0; i < arr.length; i++){
+            if(from == arr[i].account_number){
+                arr[i].balance += cash;
+            }
+        }
+
+        for(let j: number = 0; j < arr.length; j++){
+            if(to == arr[j].account_number){
+                arr[j].balance -= cash;
+            }
+        }
     }else{
         console.log(arr);
-    };
+    }
 }
 
 
 
 console.log(cashBalance(accounts));
 console.log('\n');
-transfer(accounts, 43546731, 23456311, 500);
+transfer(accounts, 4354671, 23456311, 500);
 
 
