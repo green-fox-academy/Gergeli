@@ -27,7 +27,7 @@ function angle(lines: number, step: number, height: number) {
   }
 }
 
-angle(30, 20, 15);
+angle(35, 20, 15);
 
 
 
