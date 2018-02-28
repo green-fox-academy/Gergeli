@@ -34,17 +34,17 @@ function cashBalance(arr: any[]){
     return list;
 }
 
-function transfer(arr: any[], from: number, to: number, cash: number,){
+function transfer(arr: any[], from: number, to: number, cash: number,) {
     let t: number[] = [];
 
-    for(let i: number = 0; i < arr.length; i++){
+    for (let i: number = 0; i < arr.length; i++) {
         if(from == arr[i].account_number){
             arr[i].balance -= cash;
             t[0] = 1;
         }
     }
 
-    for(let j: number = 0; j < arr.length; j++){
+    for (let j: number = 0; j < arr.length; j++) {
         if(to == arr[j].account_number){
             arr[j].balance += cash;
             t[1] = 1;
