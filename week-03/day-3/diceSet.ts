@@ -56,8 +56,6 @@ class DiceSet {
 
 function r() {
   let myArr: number[] = myDice.roll();
-  let f: number[] = [];
-
   for(let i: number = 0; i < 6; i++) {
     while(myArr[i] !== 6) {
       myDice.reroll(i);
