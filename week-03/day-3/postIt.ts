@@ -13,19 +13,15 @@ class PostIt {
   public backroundColor: string;
   public text: string;
   public textColor: string;
+
+  constructor(backroundColor: string, text: string, textColor: string){
+    backroundColor = this.backroundColor;
+    text = this.text;
+    textColor = this.textColor;
+  }
 }
 
-let orange = new PostIt();
-  orange.backroundColor = 'orange';
-  orange.text = 'Idea 1';
-  orange.textColor = 'blue';
-
-let pink = new PostIt();
-  orange.backroundColor = 'pink';
-  orange.text = 'Awesome';
-  orange.textColor = 'black';
-  
-let yellow = new PostIt();
-  orange.backroundColor = 'yellow';
-  orange.text = 'Superb';
-  orange.textColor = 'green';
+let orange = new PostIt('orange', 'Idea 1', 'blue');
+let pink = new PostIt('pink', 'Awesome', 'black');
+let yellow = new PostIt('yellow', 'Superb', 'green');
+ 
