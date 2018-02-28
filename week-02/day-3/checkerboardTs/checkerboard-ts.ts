@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d');
 for(let j: number = 0; j < 8; j++){
     for(let i: number = 0; i < 8; i++){
 
-          if(j % 2 == 0){
+        if(j % 2 == 0){
             if(i % 2 == 0){
                 ctx.fillStyle ='white';
                 ctx.fillRect(i * 50, j * 50, 50, 50); 
