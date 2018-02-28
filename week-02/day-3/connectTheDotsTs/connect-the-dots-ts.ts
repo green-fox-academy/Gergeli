@@ -19,6 +19,8 @@ function conn(arr: number[][]){
     
     for(let i: number = 0; i < arr.length - 1; i++){
         
+        
+
             ctx.beginPath();
             ctx.lineWidth = 1;
             ctx.strokeStyle = 'red';
