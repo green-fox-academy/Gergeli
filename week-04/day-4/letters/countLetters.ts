@@ -10,7 +10,7 @@ export class Letters {
       arr[i] = `${word.charAt(i)} ${lett}`;
     }
 
-    let q: string = arr.filter((el, index) => arr.indexOf(el) === index ).join(', ');
+    let q: string = arr.filter((el, i) => arr.indexOf(el) === i).join(', ');
 
     return q;
   }
