@@ -30,4 +30,4 @@ function triangle(x: number, y: number, width: number, height: number) {
   }
 }
 
-triangle(0, 0, 600, 500);
+triangle(0, 0, 500, 500);
