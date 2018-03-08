@@ -3,9 +3,11 @@ import { Sum } from './sum';
 
 test('Sum the list elements', t => {
   let s = new Sum();
-  let testArray: number[] = [1, 2, 3];
-  
 
-  t.equal(s.getSum(testArray), 6);
+  t.equal(s.getSum([1, 2, 3]), 6);
+  t.equal(s.getSum([]), 0);
+  t.equal(s.getSum([1]), 1);
+  t.equal(s.getSum([null]), 0);
+  //t.equal(s.getSum(['srt']), 0);
   t.end();
 }); 

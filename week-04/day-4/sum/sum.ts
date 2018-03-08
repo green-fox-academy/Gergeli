@@ -6,7 +6,11 @@ export class Sum {
   let sum: number = 0;
 
   for(let i: number = 0; i < arr.length; i++){
-    sum += arr[i];
+    try {
+      sum += arr[i];
+    } catch (error) {
+      return 0;
+    }
   }
 
   return sum;
