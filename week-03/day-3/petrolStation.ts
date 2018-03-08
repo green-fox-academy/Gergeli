@@ -18,7 +18,7 @@ initialize capacity -> 100
    constructor(gasAmount) {
     this.gasAmount = gasAmount;
    }
-   refill(need, fill) {
+   refillFull(need, fill) {
      this.gasAmount -= need;
 
    }
@@ -54,5 +54,5 @@ initialize capacity -> 100
 let skoda = new Car(20, 100);
 let station = new Station(1000);
 console.log(skoda.getGasamount());
-station.refill(skoda.getGasamount(), skoda.setCapaCity());
+station.refillFull(skoda.getGasamount(), skoda.setCapaCity());
 console.log(skoda.getGasamount());
