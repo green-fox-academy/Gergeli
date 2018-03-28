@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: red;
+    }
+  </style>
+</head>
+<body id="bo">
+  
+  <script>
+    let b = document.querySelector('body');
+    let colors = ['blue', 'yellow', 'cyan', 'grey', 'orange'];
+    let nth = 0;
+    let audio = new Audio('./gandalf.mp3');
+    audio.play();
+
+    function random_rgba() {
+            var o = Math.round, r = Math.random, s = 255;
+            return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+        }
+
+    setInterval(() => {
+      if(nth === colors.length) {
+        nth = 0;
+      }
+      b.style.background = random_rgba();
+      nth += 1;
+    }, 600);
+  </script>
+</body>
+</html>
