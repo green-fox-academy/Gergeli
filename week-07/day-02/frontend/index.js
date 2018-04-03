@@ -45,8 +45,18 @@ app.get('/greeter/', (req, res) => {
     });
 
   }
+});
 
-  //name=Petike&title=student
+app.get('/appenda/:appendable', (req, res) => {
+  const appendable = req.params.appendable;
+
+  if(appendable === undefined) {
+    res.status(404);
+  } else {
+    res.json({
+        "appended": `${appendable}a`,
+    });
+  }
 });
 
 
