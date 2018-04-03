@@ -96,7 +96,44 @@ app.post('/dountil/:thing', (req, res) => {
 });
 
 
+app.post('/arrays/', (req, res) => {
+  const what = req.body.what;
 
+  if(what === undefined) {
+    res.json({
+      "error": "Please provide what to do with the numbers!"
+    });
+  }else if(req.body.numbers === undefined){
+    res.json({
+      "error": "Please provide what to do with the numbers!"
+    });
+  }else if(what === "sum") {
+    let result = 0;
+    for(let i = 0; i < req.body.numbers.length; i++) {
+      result += req.body.numbers[i];
+    }
+    res.json({
+      "result": result,
+    });
+  }else if(what === "multiply") {
+    let result = 1;
+    for(let i = 0; i < req.body.numbers.length; i++) {
+      result *= req.body.numbers[i];
+    }
+    res.json({
+      "result": result,
+    });
+  } else if(what === "double") {
+    let arr = []; 
+    for(let i = 0; i < req.body.numbers.length; i++) {
+      arr.push(req.body.numbers[i] * 2);
+    }
+    res.json({
+      "result": arr,
+    });
+  }
+  res.end();
+});
 
 
 
