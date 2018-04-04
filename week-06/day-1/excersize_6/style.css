@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  background: #FFDE00;
+  height: 300px;
+  width: 100%;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.item {
+  background: purple;
+  height: 110px;
+  width: 110px;
+  align-self: center;
+  margin-right: 20px;
+}
+
+/* ------------------- 3.2 -------------------------- */
+
+.con_2 {
+  justify-content: space-between;
+}
+
+.item_2 {
+  background: purple;
+  height: 110px;
+  width: 110px;
+  align-self: center;
+}
+
+/* ------------------ 3.3 --------------------------- */
+
+.con_3 {
+  justify-content: flex-end;
+}
+
+.item_3 {
+  background: purple;
+  height: 110px;
+  width: 110px;
+  align-self: flex-end;
+  margin-left: 10px;
+}

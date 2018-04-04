@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  background: cyan;
+  flex-grow: 1;
+}
+
+.foot {
+  background: blue;
+  flex-grow: 1;
+}
+
+.left {
+  width: 80px;
+  background: orange;
+}
+
+.right {
+  width: 80px;
+  background: purple;
+}
+
+.middle_middle {
+  background: red;
+  width: 250px;
+}
+
+.fix {
+  position: fixed;
+  background: black;
+  width: 50px;
+  height: 50px;
+  bottom: 170px;
+  left: 300px;
+}
