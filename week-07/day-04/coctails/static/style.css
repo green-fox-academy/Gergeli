@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: tomato;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.alcohols {
+  display: flex;
+  height: 31x;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+table {
+  width: 530px;
+
+}
+
+.pr {
+  width: 150px;
+}
+
+thead {
+  background: black;
+  color: white;
+  height: 34px;
+}
+
+tr:nth-child(even) {
+  background: #F3F1F1;
+  color: black;
+}
+
+tr:nth-child(odd) {
+  background: #CBC6C6;
+  color: black;
+}
+
+th {
+  background: black;
+  color: white;
+  height: 20px;
+  font-size: 24px;
+}
+
+td {
+  height: 42px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+.boose {
+  font-size: 20px;
+}
+
+.in {
+  font-size: 13px;
+}
+
+.price {
+  text-align: center;
+}
+
+.alc {
+  padding: 0 5px;
+}
+
+h1 {
+  font-size: 50px;
+}

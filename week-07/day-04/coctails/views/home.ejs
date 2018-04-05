@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>Coctails</h1>
+      <div class="alcohols">
+        <% for(let i = 0; i < alcoholList.length; i++) { %>
+          <a href="http://localhost:3000/?alcohol=<%=alcoholList[i]%>" class="alc"> <%= alcoholList[i] %> </a>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="content">
+      <table>
+        <thead>
+          <th>NAME</th>
+          <th class="pr">PRICE</th>
+        </thead>
+        <tbody>
+          <% for(let i = 0; i < a.length; i++) { %>
+            <tr>
+              <td> 
+                <p class="boose"> <%= a[i].name %> </p>
+                <p class="in"> <%= a[i].contains %> </p>
+                
+              </td>
+              <td class="price"> <%= a[i].price %> </td>
+            </tr>
+          <% } %>
+
+
+         <!-- <tr>
+            <td>Gin</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>RUM</td>
+            <td>1000</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
