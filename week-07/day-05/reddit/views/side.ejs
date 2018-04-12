@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/side.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="topicList">
+      <a href="">POPULR - </a>
+      <a href="">MIND - </a>
+      <a href="">VÉLETLENSZERŰ - </a>
+      <a href="">USERS - </a>
+      <a href="">ASKREDDIT - </a>
+      <a href="">WORLDNEWS - </a>
+      <a href="">VIDEOS - </a>
+      <a href="">FUNNY - </a>
+      <a href="">TODAYILEARNED - </a>
+      <a href="">PICS</a>
+      <a href="">GAMING</a>
+      <a href="">MOVIES</a>
+      <a href="">NEWS</a>
+    </div>
+    <div class="head">
+      <img src="../static/images/reddit.png" alt="">
+      <div class="navbar">
+        <a href="" class="navA">legérdekesebb</a>
+        <a href="" class="navA">legújabb</a>
+        <a href="" class="navA">erősödő</a>
+        <a href="" class="navA">ellentmondésos</a>
+        <a href="" class="navA">csúcs</a>
+        <a href="" class="navA">aranyozott</a>
+        <a href="" class="navA">wiki</a>
+      </div>
+    </div>
+    <div class="reg"></div>
+    <div class="point">
+      <div>
+        <p><%=rows[0].title%></p>
+      </div>
+      <div class="content">
+        <p><%=rows[0].text%></p>
+      </div>
+      <form action="">
+        <input type="text">
+        <button>save</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
