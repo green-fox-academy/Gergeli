@@ -8,6 +8,7 @@ let urlencodedParse = bodyParser.urlencoded({extended: false})
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 app.use(bodyParser.json());
+app.use(express.json());
 
 const con = mysql.createConnection({
   host: 'localhost',
@@ -46,7 +47,23 @@ app.get('/new/', (req, res) => {
 });
 
 app.post('/', urlencodedParse, (req, res) => {
-  console.log(r)
+  const sql = `INSERT INTO users (username, email, password) VALUES (${req.body.username}, ${req.body.email}, ${req.body.password})`;
+
+  con.query(sql, (err, result) => {
+    if(err) {
+      console.log(err);
+    }
+  });
+
+
+  con.query('SELECT * FROM Text', (err, rows) => {
+    if(err) {
+      console.log(err);
+    }
+    res.render('home', {
+      rows,
+    });
+  });
 });
 
 
