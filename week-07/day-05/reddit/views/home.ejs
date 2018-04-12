@@ -9,27 +9,80 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container"><!-- -->
+
     <div class="head">
-      <!--<img src="../static/images/header.jpg" alt="milki way" id="space">-->
-      <p>SPACE</p>
+      <h1>SPACE</h1>
     </div>
+
     <div class="main">
-      <div class="content"></div>
-      <div class="registration">
-        <form action="/" method="POST" class="reg">
-          <label for="name">username</label>
-          <input type="text" id="name" class="input">
-          <label for="email">e-mail</label>
-          <input type="email" id="email" class="input">
-          <label for="password">password</label>
-          <input type="password" id="password" class="input">
-          <input type="submit" value="registration" class="regButton">
-          <!--<button class="regButton">Registration</button>-->
-        </form>
+
+      <div class="content">
+          <% rows.forEach( (e, i) => { %>
+            <div class="tile">
+              <img src="../static/images/space.jpg" alt="space" class="tileIMG">
+              <a href="<%=e.url%>"><%=e.title%></a>
+                              
+            </div>
+          <% }); %>
+      </div>
+
+      <div class="second">
+
+        <button class="post">POST</button>
+        <!-- action="/" method="POST"  -->
+        <div class="in border">
+          <form class="SignIn forms" id="signed">
+            <div class="inputs">
+              <label for="username">username</label>
+              <input type="text" class="felh" id="username">
+            </div>
+            <div class="inputs">
+              <label for="password">password</label>
+              <input type="text" id="password" class="jelszo">
+            </div>
+            <input type="submit" class="regButton" id="bejelentkezes" value="Log in">
+            <button class="account regButton">Create an account</button>
+          </form>
+        </div>
+
+        <div class="registration border">
+          <form action="/" method="POST" class="reg forms">
+            <div class="inputs">
+              <label for="name">username</label>
+              <input type="text" id="name" class="input">
+            </div>
+            <div class="inputs">
+              <label for="email">e-mail</label>
+              <input type="email" id="email" class="input">
+            </div>
+            <div class="inputs">
+              <label for="password">password</label>
+              <input type="password" id="regPassword" class="input">
+            </div>
+            <input type="submit" value="registration" class="regButton" id="makeNewUser">
+            <!--<button class="regButton">Registration</button>-->
+          </form>
+        </div>
+
+        <div class="newPost border">
+          <form action="" class="newPostForm forms">
+            <div class="inputs">
+              <label for="title">title</label>
+              <input type="text" id="title">
+            </div>
+            <div class="inputs">
+              <label for="url">url</label>
+              <input type="text">
+            </div>
+            <input type="submit" class="regButton">
+          </form>
+        </div>
+    
       </div>
     </div>
-    <script src="../static/script.js"></script>
-  </div>
+  </div> 
+  <script src="../static/script.js"></script>
+  <script src="../static/source.js"></script>
 </body>
 </html>
