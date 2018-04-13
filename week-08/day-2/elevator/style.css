@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: tomato;
+}
+
+.container {
+  width: 70%;
+  height: 580px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.controller {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  width: 200px;
+  height: 400px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 120px;
+  height: 30px;
+}
+
+.elevator {
+  width: 300px;
+  height: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.floor {
+  width: 250px;
+  height: 25px;
+  background: grey;
+  text-align: center;
+}
+
