@@ -20,9 +20,10 @@ body {
   flex-direction: row;
   align-self: center;
   align-content: center;
-  width: 70%;
-  height: 400px;
+  width: 80%;
+  height: 500px;
   opacity: 1;
+  margin-top: 10px;
 }
 
 .mini {
@@ -66,6 +67,7 @@ body {
 .foot {
   align-self: center;
   margin-top: 5px;
+  margin-bottom: 4px;
   font-family: 'Inknut Antiqua', serif;
   font-size: 15px;
 }

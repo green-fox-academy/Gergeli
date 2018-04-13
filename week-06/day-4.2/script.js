@@ -66,7 +66,7 @@ function back() {
 }
 
 console.log(pictures.length);
-
+/*
 let minute = 4;
 let second = 0;
 let alert = ['#b5b9bf', 'rgb(198, 63, 63)'];
@@ -106,5 +106,64 @@ document.addEventListener('keyup', (e) => {
     back();
   } else if(e.keyCode === 39) {
     next();
+  }
+});
+
+*/
+
+console.log(window.innerHeight);
+console.log(screen.height);
+console.log(screen.availHeight);
+
+function m() {
+document.addEventListener('fullscreenchange', (v) => {
+  if(document.fullscreenElement !== null) {
+    console.log('full');
+  } else {
+    console.log('not');
+  }
+});
+};
+m();
+
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+recognition.interimResults = true;
+recognition.lang = 'en-Us';
+
+//let i = document.createElement('img');
+//i.setAttribute('src', 'https://media.makeameme.org/created/its-working-oyy433.jpg');
+//const words = document.querySelector('.words');
+//words.appendChild(i);
+
+
+recognition.addEventListener('result', e => {
+  const transcript = Array.from(e.results)
+  .map(result => result[0])
+  .map(result => result.transcript)
+  .join('');
+  //console.log(transcript);
+  let array = [];
+  array.push(transcript);
+  array.forEach( (e, i) => {
+    if(e.indexOf('next') > -1) {
+      console.log('működik');
+      counter++;
+      if(counter === 8) {
+        counter = 0;
+      }
+      mainPicture.setAttribute('src', pictures[counter]);
+      console.log(counter);
+    } else {
+      console.log('ROSSZ');
+    }
+  });
+});
+
+//recognition.start();
+
+document.addEventListener('keydown', e => {
+  if(e.keyCode === 81) {
+    recognition.start();
   }
 });
