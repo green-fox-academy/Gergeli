@@ -33,7 +33,6 @@ class Plants {
       return `The ${this.name} Plant doesnt needs water`;
     }
   }
-
 }
 
 class Flower extends Plants {
@@ -68,10 +67,16 @@ myGarden.addTree(braun);
 myGarden.addTree(grey);
 
 for (let i: number = 0; i < myGarden.plants.length; i++) {
-  console.log(myGarden.plants[i].needwatering);
+  console.log(myGarden.plants[i].needwatering());
 }
 myGarden.watering(40);
 
 for (let i: number = 0; i < myGarden.plants.length; i++) {
-  console.log(myGarden.plants[i].needwatering);
+  console.log(myGarden.plants[i].needwatering());
+}
+
+myGarden.watering(70);
+
+for (let i: number = 0; i < myGarden.plants.length; i++) {
+  console.log(myGarden.plants[i].needwatering());
 }
