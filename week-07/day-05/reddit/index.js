@@ -67,6 +67,17 @@ app.get('/login/a/', (req, res) => {
   });
 });
 
+
+app.post('/text', (req, res) => {
+  const sql = `INSERT INTO info (title, text, url) VALUES (?, ?, ?);`;
+  const input = [req.body.title, req.body.text, req.body.url];
+  con.query(sql, input, (err, result) => {
+    if(err) {
+      console.log(err);
+    }
+  });
+});
+
 //_----------------------------------------------------
 //_----------------------------------------------------
 //_----------------------------------------------------

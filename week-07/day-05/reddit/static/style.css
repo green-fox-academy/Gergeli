@@ -115,3 +115,23 @@ h1 {
 .reg {
   height: 230px;
 }
+
+.tile {
+  width: 80%;
+  height: 80px;
+  background: #CEC9C9;
+  display: flex;
+  align-items: center;
+  margin: 8px 10px;
+}
+
+.tileIMG {
+  height: 70px;
+  margin: 0 10px;
+}
+
+.themes {
+  height: 70px;
+  margin: 1px 20px;
+}
+

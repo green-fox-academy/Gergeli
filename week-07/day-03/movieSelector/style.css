@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./back.jpg');
+  background-size: 100%;
+}
+
+.container {
+  background: rgba(113, 109, 109, 0.58);
+  width: 450px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

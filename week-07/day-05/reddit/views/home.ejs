@@ -21,8 +21,10 @@
           <% rows.forEach( (e, i) => { %>
             <div class="tile">
               <img src="../static/images/space.jpg" alt="space" class="tileIMG">
-              <a href="<%=e.url%>"><%=e.title%></a>
-                              
+              <div class="themes">
+                <a href="<%=e.url%>" target="blank"><%=e.title%></a>
+                <p><%=e.text%></p>
+              </div>
             </div>
           <% }); %>
       </div>
@@ -66,16 +68,20 @@
         </div>
 
         <div class="newPost border">
-          <form action="" class="newPostForm forms">
+          <form action="/text/" method="POST" class="newPostForm forms">
             <div class="inputs">
               <label for="title">title</label>
               <input type="text" id="title">
             </div>
             <div class="inputs">
               <label for="url">url</label>
-              <input type="text">
+              <input type="text" id="posturl">
             </div>
-            <input type="submit" class="regButton">
+            <div class="inputs">
+                <label for="">text</label>
+                <input type="text" id="szoveg">
+              </div>
+            <input type="submit" class="regButton" id="makeApost">
           </form>
         </div>
     

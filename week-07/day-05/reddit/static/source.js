@@ -65,3 +65,16 @@ document.querySelector('#makeNewUser').addEventListener('click', (e) => {
   
   e.preventDefault();
 });
+
+document.querySelector('#makeApost').addEventListener('click', (e) => {
+  let newPost = new XMLHttpRequest();
+  newPost.open('POST', 'http://localhost:3000/text/');
+  newPost.setRequestHeader('Content-Type', 'application/json');
+  newPost.send(JSON.stringify({
+    title: document.querySelector('#title').value,
+    text: document.querySelector('#szoveg').value,
+    url: document.querySelector('#posturl').value,
+  }));
+
+  e.preventDefault();
+});
