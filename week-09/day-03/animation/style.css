@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #606060;
+}
+
+.container {
+  width: 100%;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover {
+  position: fixed;
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  border: 3px solid tomato;
+  color: #606060;
+  transition: 0.5s;
+}
+
+.p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  color: #606060;
+  transition: 0.5s;
+}
+
+.border:hover {
+  transform: rotate(45deg);
+}
+
+.border:hover :nth-child(1) {
+  color: tomato;
+  transform: rotate(-45deg);
+}
+
